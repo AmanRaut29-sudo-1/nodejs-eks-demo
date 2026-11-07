@@ -1,0 +1,2 @@
+# dependencies :- npm install , npm test , npm start , tested locally http://localhost:3000 
+# docker build -t nodejs-eks-demo . , docker run -p 3000:3000 nodejs-eks-demo

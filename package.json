@@ -1,1 +1,11 @@
-
+{
+  "name": "nodejs-eks-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node -e \"const app = require('./app'); const server = app.listen(0, () => { const port = server.address().port; require('http').get('http://127.0.0.1:' + port + '/health', res => { if (res.statusCode !== 200) process.exitCode = 1; res.resume(); server.close(); }); });\""
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
